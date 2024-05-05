@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "random-stuff",
+	"version": "${version}",
+	"name": "Random Stuff",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/random-stuff/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.mindcool.RandomStuff"
+		],
+		"client": [
+			"xyz.mindcool.RandomStuffClient"
+		]
+	},
+	"mixins": [
+		"random-stuff.mixins.json",
+		{
+			"config": "random-stuff.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
